@@ -9,6 +9,7 @@ const ChatComponent = () => {
   // Modtag beskeder
   useEffect(() => {
     socket.on("receive_message", (message) => {
+      console.log("message");
       setChat((prevChat) => [...prevChat, message]);
     });
 
